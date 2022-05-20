@@ -14,3 +14,5 @@ echo "https://site.ru/folder/download/test.docx" "https://github.com/" | grep -E
 echo "https://site.ru/folder/download/test.docx" "https://github.com/" | grep -E  '^\w+\.(?!(png|gif)$)[a-z]{2,3}'
 
 echo "https://site.ru/folder/download/test.docx" "https://github.com/" | grep -E '^https?:\/(\/.+\/){1,6}\w+\.(?!(png|gif)$)[a-z]{2,3}'
+
+echo "https://site.ru/folder/download/test.docx" "https://github.com/" | grep -E '^.+(.doc|.DOC|.docx|.DOCX|.rtf|.RTF|.pdf|.PDF)'
