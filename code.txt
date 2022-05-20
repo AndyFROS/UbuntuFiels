@@ -6,3 +6,11 @@ echo "5.255.255.5" "127.16.0.1"| grep -Eq '^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1
 
 
 echo "https://site.ru/folder/download/test.docx" "https://github.com/" | grep -E '(https?:\/\/)?((([a-z0-9]+\.)+[a-z]{1,4})|(([a-я0-9]+\.)+[a-я]{1,4}))\/([a-zа-я0-9]+\/?)+\.(?!exe|sh|zip|rar)(.{1,4})'
+
+
+
+
+# Аьтернативное решение:
+echo "https://site.ru/folder/download/test.docx" "https://github.com/" | grep -E  '^\w+\.(?!(png|gif)$)[a-z]{2,3}'
+
+echo "https://site.ru/folder/download/test.docx" "https://github.com/" | grep -E '^https?:\/(\/.+\/){1,6}\w+\.(?!(png|gif)$)[a-z]{2,3}'
